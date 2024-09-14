@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="icon" type="images/ico" href="media/STOP.ico">
+    <link rel="icon" type="image/ico" href="media/STOP.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zins</title>
+    <title>zins</title> <!-- Initial title -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .overlay {
@@ -46,7 +46,7 @@
 </head>
 <body>
     <div class="overlay" id="overlay">
-        Click <> Here
+        Press anywhere to start
     </div>
     <audio id="background-music" src="media.mp3" loop></audio>
     <div class="container hidden">
@@ -77,7 +77,20 @@
             </div>
         </div>
     </div>
+
     <script>
+        // Title animation code
+        const titleText = "zins";
+        let titleIndex = 0;
+
+        function animateTitle() {
+            document.title = titleText.slice(0, titleIndex + 1);  // Add one letter at a time
+            titleIndex = (titleIndex + 1) % (titleText.length + 1);  // Loop through letters
+        }
+
+        setInterval(animateTitle, 500);  // Change every 500ms
+
+        // Background media control
         document.getElementById('overlay').addEventListener('click', function() {
             document.getElementById('background-music').play();
             document.getElementById('background-video').play();
