@@ -4,16 +4,33 @@
     <link rel="icon" type="image/ico" href="media/STOP.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zins</title> <!-- Initial title -->
+    <title>zins</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 1);
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             display: flex;
             align-items: center;
@@ -41,20 +58,31 @@
         .avatar {
             border-radius: 50%;
             display: block;
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+        }
+        .social-links img {
+            width: 32px; /* Adjust size as needed */
+            height: 32px; /* Adjust size as needed */
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
+    <video class="background-video" loop muted autoplay>
+        <source src="media/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="overlay" id="overlay">
         Press anywhere to start
     </div>
     <audio id="background-music" src="media.mp3" loop></audio>
     <div class="container hidden">
-        <div class="background-video">
-            <video id="background-video" loop muted>
-                <source src="media/video1.mp4" type="video/mp4">
-            </video>
-        </div>
         <div class="content-wrapper">
             <div class="left-content">
                 <div class="rectangle">
@@ -64,7 +92,7 @@
                         </a>
                         <h1 class="nickname">zins</h1>
                         <img src='icons/Discord.svg' class='discord' alt="Discord">
-                        <div class="social-links social-links-rectangle">
+                        <div class="social-links">
                             <a href="https://github.com/cnzins1" target="_blank">
                                 <img src="icons/github.svg" alt="Github">
                             </a>
@@ -77,20 +105,16 @@
             </div>
         </div>
     </div>
-
+    
     <script>
-        // Title animation code
-        const titleText = "zins";
-        let titleIndex = 0;
+        // Animation for title
+        const titleText = ['z', 'i', 'n', 's'];
+        let index = 0;
+        setInterval(() => {
+            document.title = titleText[index];
+            index = (index + 1) % titleText.length;
+        }, 500); // Change every 500ms
 
-        function animateTitle() {
-            document.title = titleText.slice(0, titleIndex + 1);  // Add one letter at a time
-            titleIndex = (titleIndex + 1) % (titleText.length + 1);  // Loop through letters
-        }
-
-        setInterval(animateTitle, 500);  // Change every 500ms
-
-        // Background media control
         document.getElementById('overlay').addEventListener('click', function() {
             document.getElementById('background-music').play();
             document.getElementById('background-video').play();
