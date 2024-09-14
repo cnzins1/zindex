@@ -323,3 +323,13 @@ body {
     margin: 0;
     border-radius: 20px;
 }
+
+/* Add this to your existing CSS or inside <style> */
+.container {
+    perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.content-wrapper {
+    transition: transform 0.1s; /* Smooth transition for tilt effect */
+    transform-style: preserve-3d;
+}
