@@ -60,10 +60,10 @@ div::selection, span::selection, a::selection, button::selection, img::selection
 }
 
 .FirstBlockDivider {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
 
     z-index: 1;
 
@@ -84,8 +84,8 @@ div::selection, span::selection, a::selection, button::selection, img::selection
 }
 
 .FirstBlock {
-    height: 100vh;
-    width: 100%;
+    height: 110vh;
+    width: 110%;
 
     display: flex;
     justify-content: center;
@@ -724,7 +724,7 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     align-items: center;
 
     /* width: 100%; */
-    height: 100vh;
+    height: 110vh;
 
     /* background: url('assets/media/Rectangle.jpg') center / cover; */
 
@@ -794,8 +794,6 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     justify-content: center;
 
     border-left: 2px solid rgba(255, 255, 255, 0.25);
-
-    
 }
 
 .SecondBlockContainer .col.right {
@@ -810,7 +808,6 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     color: rgb(255, 255, 255);
     transition: 0.2s;
 }
-
 
 .ThirdBlock {
     display: flex;
@@ -837,14 +834,10 @@ div::selection, span::selection, a::selection, button::selection, img::selection
 
 .ThirdBlockContainer {
     width: 100%;
-    /* padding-left: 20vw;
-    padding-right: 20vw; */
     padding-top: 15vh;
 }
 
 .ThirdBlockRow1 {
-    /* width: 100%; */
-    
     display: flex;
     align-items: center;
     justify-content: start;
@@ -877,8 +870,8 @@ div::selection, span::selection, a::selection, button::selection, img::selection
 
 .leftDiv:before {
     content: "";
-    margin-right: max(1.25rem,1.38vw);
-    width: max(3.75rem,5vw);
+    margin-right: max(1.25rem, 1.38vw);
+    width: max(3.75rem, 5vw);
     height: 1px;
     background-color: #D900FF;
     transform: scaleX(1);
@@ -922,8 +915,6 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
-    /* or 36px */
-
 
     color: #FFFFFF;
 }
@@ -979,10 +970,6 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     height: 1px;
     background-color: #D900FF;
 
-    /* position: absolute; */
-    right: 0;
-    top: 50%;
-
     margin-left: 3vw;
 
     width: 20%;
@@ -1021,7 +1008,6 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     font-weight: bold;
     font-size: 110px;
     line-height: 134px;
-    /* identical to box height */
 
     text-align: center;
 
@@ -1058,6 +1044,7 @@ div::selection, span::selection, a::selection, button::selection, img::selection
     text-shadow: 0px 0px 10px #D900FF;
     cursor: pointer;
 }
+
 
 .FifthBlockMailDivider {
     height: 1px;
