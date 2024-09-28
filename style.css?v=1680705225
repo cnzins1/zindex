@@ -1,0 +1,2807 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat/Montserrat-Regular.ttf);
+} 
+
+@font-face {
+    font-family: BRAVEEightyoneRound;
+    src: url(assets/fonts/Brave/BRAVEEightyone-round.ttf);
+}
+
+@font-face {
+    font-family: BRAVEEightyoneOutline;
+    src: url(assets/fonts/Brave/BRAVEEightyone-Outline.ttf);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+input {
+    outline:none;
+}
+
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(48, 4, 54, 0.5);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(217, 0, 255, 0.7);
+}
+
+div::selection, span::selection, a::selection, button::selection, img::selection {
+    color: #D900FF;
+    background: rgba(92, 0, 0, 0);
+}
+
+.FirstBlockDivider {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+
+    z-index: 1;
+
+    position: relative;
+
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.FirstBlockDividerFade {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.FirstBlock {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    z-index: 2;
+}
+
+.FirstBlockBg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    /* height: 100vh; */
+}
+
+@supports (object-fit: cover) {
+    .FirstBlockBg {
+        width: 100%;
+        /* height: 100%; */
+        object-fit: cover;
+    }
+}
+
+.FirstBlockContent {
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 6vh;
+    position: relative;
+}
+
+.FirstBlockContentCenterContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+    transition: transform 0.05s linear;
+    perspective: 1000px;
+}
+
+.FirstBlockContentCenter {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+
+    overflow: hidden;
+}
+
+.FirstBlockContentCenterText {
+    transition: 2s;
+}
+
+.FirstBlockContentCenterTextTitle {
+    font-family: BRAVEEightyoneRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25vh;
+    line-height: 20vh;
+    text-align: center;
+    letter-spacing: 13.5px;
+
+    
+
+    color: #FFFFFF;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.FirstBlockContentCenterTextDesc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 13.5px;
+
+    color: #FFFFFF;
+
+    width: 100%;
+
+    margin-top: 6vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.FirstBlockContentCenterTextSubDesc {
+    position: absolute;
+    transform: translateZ(60px);
+    opacity: 0.3;
+    font-size: 18px;
+}
+
+.FirstBlockContentCenterTextSubTitle {
+    position: absolute;
+    font-size: 22.5vh;
+    font-family: BRAVEEightyoneOutline;
+    opacity: 0.7;
+    transform: translateZ(60px);
+}
+
+.FirstBlockContentCenterButtonBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8vh;
+}
+
+.FirstBlockContentCenterButtonBlockMLogin {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.FirstBlockContentCenterButton {
+    text-decoration: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    background: linear-gradient(95.5deg, rgba(255, 255, 255, 0.12) 14.65%, rgba(255, 255, 255, 0.04) 80.71%);
+    mix-blend-mode: normal;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+
+    padding: 1.3vh 10vh;
+
+    transition: 0.5s;
+}
+
+.FirstBlockContentCenterButton:hover {
+    filter: hue-rotate(12deg);
+    box-shadow: 0px 0px 5px #D900FF;
+
+    color: #d074e0;
+    border: 1px solid #d074e0;
+
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.FirstBlockContentLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 2;
+}
+
+.FirstBlockButton {
+    text-decoration: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    transition: 0.5s;
+
+    position: relative;
+}
+
+.FirstBlockButtonBlock {
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    transition: 0.5s;
+
+    position: relative;
+}
+
+.FirstBlockButton:hover.FirstBlockButton:before {
+    bottom: 100%;
+}
+
+.FirstBlockButton:before {
+    content: "";
+    background-color: rgba(217, 0, 255, 1);
+
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 250%;
+    left: 0;
+    transition: 0.2s;
+}
+
+.FirstBlockButtonBold {
+    text-decoration: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    color: #FFFFFF;
+
+    transition: 0.5s;
+
+    white-space: nowrap;
+}
+
+.FirstBlockButtonLine {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .FirstBlockContent {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .FirstBlockContentCenterButtonBlockMLogin {
+        display: flex;
+    }
+    
+
+    .FirstBlockButtonBold {
+        display: none;
+    }
+
+    .FirstBlockButtonLine {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .FirstBlockContentCenterTextTitle {
+        font-size: 9vh;
+        line-height: 100%;
+    }
+
+    .FirstBlockContentCenterTextSubTitle {
+        font-size: 8vh;
+        line-height: 100%;
+    }
+
+    .FirstBlockContentCenterTextDesc {
+        font-size: 2vh;
+        white-space: nowrap;
+        letter-spacing: 0;
+        margin-top: 0.5vh;
+    }
+
+    .FirstBlockContentCenterTextSubDesc {
+        opacity: 0;
+    }
+
+    .FirstBlockContentCenterButton {
+        font-size: 3vh;
+        line-height: 100%;
+        white-space: nowrap;
+    }
+
+    .FirstBlockContentLine .FirstBlockButtonBoldDown {
+        font-size: 2vh;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+
+    .FirstBlockDivider {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.FirstBlockButtonBoldDown {
+    text-decoration: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+
+    letter-spacing: -2px;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    color: #FFFFFF;
+
+    transition: 0.5s;
+
+    white-space: nowrap;
+
+    z-index: 5;
+
+    position: relative;
+}
+
+.FirstBlockButtonBoldDown .FifthBlockMailDivider {
+    margin-top: 0.5vh;
+    transition: 0.2s;
+    margin-left: 3px;
+}
+
+.FirstBlockButtonBoldDown:hover.FirstBlockButtonBoldDown .FifthBlockMailDivider {
+    width: 0;
+}
+
+.FirstBlockButtonBold:hover, .FirstBlockButtonBoldDown:hover {
+    color: #D900FF;
+    transition: 0.5s;
+    text-shadow: 0px 0px 10px #D900FF;
+    cursor: pointer;
+}
+
+.FirstBlockButton:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    border-bottom: 3px solid #D900FF;
+}
+
+.addTimecontent {
+    max-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.addTimeBtn {
+    border: 1px solid #FFCF25;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    text-decoration: none;
+
+    background: transparent;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transition: 0.2s;
+}
+
+.addTimeBtn:hover {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addTimeBtnActive {
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+.addTimeFormControl {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #D900FF;
+    padding-bottom: 10px;
+    width: 100%;
+
+    margin-top: 0;
+    /* margin-bottom: 20px; */
+    padding-bottom: 20px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 95%;
+    /* identical to box height, or 17px */
+
+    /* text-align: right; */
+
+    color: #585858;
+}
+
+.addTimeInputButton {
+    border: 1px solid #D900FF;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    text-decoration: none;
+
+    background: transparent;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transition: 0.2s;
+
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+}
+
+.addTimeInputButton:hover {
+    cursor: pointer;
+    
+    background-color: rgba(164, 28, 218, 0.2);
+
+    transition: 0.2s;
+}
+
+.addTimeFormBottomPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTimeForm {
+    margin-bottom: 8vh;
+}
+
+.subContentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+
+    margin-bottom: 2.5vh;
+
+    background: linear-gradient(88.97deg, rgba(255, 203, 102, 0.2) 0%, rgba(122, 18, 43, 0.2) 0.01%, rgba(0, 0, 0, 0) 100%), #000000;
+
+    border-image-source: linear-gradient(88.97deg, #FF00E9 0%, #FDB561 100%);
+
+    transition: 0.5s;
+}
+
+.subContentRow:hover {
+    background: linear-gradient(90deg, rgba(53, 1, 39, 0.4) 30.73%, rgba(219, 149, 15, 0.75) 86.98%, rgba(255, 230, 0, 0.85) 100%), #000000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.subContentRow.r1:hover {
+    background: linear-gradient(90deg, rgba(63, 0, 63, 0.05) 0%, rgba(128, 0, 255, 0.8) 86.98%, rgba(173, 0, 255, 0.8) 100%), #000000;
+    transition: 0.5s;
+}
+
+.subContentRow.r2:hover {
+    background: linear-gradient(90deg, rgba(0, 124, 139, 0.05) 0%, rgba(93, 0, 255, 0.8) 94.13%, rgba(82, 0, 255, 0.8) 100%), #000000;
+    transition: 0.5s;
+}
+
+.subContentRow.r1 {
+    border-image-source: linear-gradient(88.97deg, #FF00FF 0%, #7A00F3 100%);    
+}
+
+.subContentRow.r2 {
+    border-image-source: linear-gradient(88.97deg, #00E3FE 0%, #5D00FF 100%);    
+}
+
+.subContentRowDays {
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 95%;
+
+    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+
+    white-space: nowrap;
+
+    background: -webkit-linear-gradient(180deg, #FF00E9 -3.43%, #FDB561 113.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subContentRowDays.r1 {
+    background: -webkit-linear-gradient(0deg, #FF00FF 0%, #7A00F3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subContentRowDays.r2 {
+    background: -webkit-linear-gradient(0deg, #00E3FE 0%, #5D00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subContentRowPrice {
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 95%;
+
+    color: #FFFFFF;
+
+    white-space: nowrap;
+}
+
+.subContentRowArrow {
+    width: 100%;
+    height: 0;
+    /* background-color: #ffffff; */
+
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    border: 2px dashed #4B4B4B;
+
+}
+
+.supButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1vh 2vh 1vh 3.5vh;
+
+    width: 100%;
+
+    border: 1px solid #D900FF;
+    box-sizing: border-box;
+
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+
+    transition: 0.2s;
+
+}
+
+.supButton:hover {
+    cursor: pointer;
+
+    background-color: rgba(217, 0, 255, 0.2);
+
+    transition: 0.2s;
+}
+
+.dwnldbtnanim {
+    margin-right: -1vw;
+    transition: 0.5s;
+}
+
+.dwnldbtnanim:hover {
+    filter: hue-rotate(30deg);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.supButtonText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.SecondBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 100%; */
+    height: 100vh;
+
+    /* background: url('assets/media/Rectangle.jpg') center / cover; */
+
+    overflow: hidden;
+
+    position: relative;
+
+    
+}
+
+.SecondBlock .SecondBlockVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1%;
+    height: 100vh;
+
+    transition: 1s;
+
+    opacity: 0;
+}
+
+.SecondBlock .SecondBlockVideo.v1 {
+    opacity: 1;
+}
+
+@supports (object-fit: cover) {
+    .SecondBlock .SecondBlockVideo {
+        /* width: 100%; */
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.SecondBlockContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    position: relative;
+
+    background: transparent;
+}
+
+.SecondBlockContainer .col {
+
+    width: 100%;
+    height: 100vh;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 66px;
+
+    text-align: center;
+    letter-spacing: -2px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+
+    
+}
+
+.SecondBlockContainer .col.right {
+    border-right: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.SecondBlockContainer .col span {
+    transition: 0.2s;
+}
+
+.SecondBlockContainer .col:hover span {
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+
+.ThirdBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+
+.characterImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+
+    transform: translateX(60%) translateY(60%);
+
+    transition: 3s;
+}
+
+.ThirdBlockContainer {
+    width: 100%;
+    /* padding-left: 20vw;
+    padding-right: 20vw; */
+    padding-top: 15vh;
+}
+
+.ThirdBlockRow1 {
+    /* width: 100%; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+
+    padding-left: 20vw;
+}
+
+.ThirdBlockRow1 .content {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 98px;
+    letter-spacing: -2px;
+
+    color: #FFFFFF;
+
+    white-space: nowrap;
+}
+
+.leftDiv {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 7vw;
+    transform: rotate(-90deg) translateX(-100%);
+}
+
+.leftDiv:before {
+    content: "";
+    margin-right: max(1.25rem,1.38vw);
+    width: max(3.75rem,5vw);
+    height: 1px;
+    background-color: #D900FF;
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+
+    position: absolute;
+    right: 100%;
+}
+
+.leftDivText {
+    position: absolute;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+
+    white-space: nowrap;
+
+    letter-spacing: -0.5px;
+
+    color: #FFFFFF;
+
+    transform: translateX(0);
+}
+
+.ThirdBlockRow2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 5vh;
+
+    padding-right: 20vw;
+}
+
+.ThirdBlockRow2rightText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+
+
+    color: #FFFFFF;
+}
+
+.FourthBlock {
+    height: 100vh;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.radImage {
+    position: absolute;
+    right: 8%;
+
+    z-index: -1;
+
+    transition: 0.5s;
+}
+
+.FourthBlockContainer {
+    width: 100%;
+}
+
+.FourthBlockTitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 98px;
+    letter-spacing: -2px;
+
+    color: #FFFFFF;
+}
+
+.FourthBlockTitle .row1 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.FourthBlockTitle .row1 .rowBDiv {
+    content: "";
+    height: 1px;
+    background-color: #D900FF;
+
+    /* position: absolute; */
+    right: 0;
+    top: 50%;
+
+    margin-left: 3vw;
+
+    width: 20%;
+}
+
+.FourthBlockDesc {
+    margin-top: 5vh;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+}
+
+.FifthBlock {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.FifthBlockContainer {
+
+}
+
+.FifthBlockTitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 110px;
+    line-height: 134px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.FifthBlockMail {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5vh;
+
+    transition: 0.5s;
+}
+
+.FifthBlockMail:hover {
+    color: #D900FF;
+    transition: 0.5s;
+    text-shadow: 0px 0px 10px #D900FF;
+    cursor: pointer;
+}
+
+.FifthBlockMailDivider {
+    height: 1px;
+    background-color: #D900FF;
+    width: 100%;
+
+    margin-top: 1.2vh;
+
+    transition: 0.5s;
+}
+
+.FifthBlockMail:hover.FifthBlockMail .FifthBlockMailC .FifthBlockMailDivider {
+    width: 0;
+}
+
+.FifthBlockDesc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #8E8E8E;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20vh;
+
+    
+}
+
+.footerCard {
+    position: absolute;
+
+    width: 300px;
+    /* height: 400px; */
+
+    background-color: #0084ff;
+
+    bottom: 0;
+
+    transition: 0.5s;
+}
+
+.footerCard.card1 {
+    background: #FF665C;
+    transform: translateY(87%) translateX(-130%) rotate(-24.66deg);
+}
+
+.footerCard.card2 {
+    background: #D900FF;
+    transform: translateY(92%) translateX(-75%) rotate(15.33deg);
+}
+
+.footerCard.card3 {
+    background: #00FFFF;
+    transform: translateY(87%) translateX(0%) rotate(-8.06deg);
+}
+
+.footerCard.card4 {
+    background: #FFCB66;
+    transform: translateY(94%) translateX(65%) rotate(4.14deg);
+}
+
+.footerCard.card5 {
+    background: #97FF66;
+    transform: translateY(87%) translateX(130%) rotate(10.3deg);
+}
+
+@media (max-width: 1000px) {
+
+    .FirstBlockButtonBoldDown .FifthBlockMailDivider {
+        margin-left: 0;
+    }
+
+    .ThirdBlockRow2rightText {
+        font-size: 2vh;
+        line-height: 150%;
+    }
+
+    .ThirdBlock {
+        align-items: flex-start;
+        /* overflow: hidden; */
+    }
+
+    .characterImage {
+        transform: translateX(12.5%) translateY(40%);
+        width: 75%;
+    }
+
+    .ThirdBlockRow2 {
+        justify-content: start;
+        padding-right: 0;
+        padding-left: 10%;
+    }
+
+    .ThirdBlockRow1 .content {
+        font-size: 4vh;
+        line-height: 5.5vh;
+    }
+    
+    .leftDiv:before {
+        width: max(10.5rem);
+    }
+    .leftDivText {
+        font-size: 1.5vh;
+        line-height: 1.5vh;
+    }
+    .leftDiv {
+        position: absolute;
+        left: 1.5vh;
+        top: 27%;
+        
+    }
+
+    .ThirdBlockRow1 {
+        padding-left: 0;
+        /* padding-left: 10%; */
+        /* justify-content: start; */
+    }
+
+    .ThirdBlockRow1 .content {
+        margin-left: 10%;
+    }
+
+    .FourthBlock {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .FourthBlockTitle {
+        font-size: 5.5vh;
+        line-height: 115%;
+        white-space: nowrap;
+        
+        letter-spacing: 0;
+    }
+
+    .FourthBlockDesc {
+        font-size: 2.2vh;
+        line-height: 150%;
+    }
+
+    .FifthBlockTitle {
+        font-size: 9vh;
+        line-height: 115%;
+    }
+
+    .FifthBlockMail {
+        font-size: 3.5vh;
+        line-height: 100%;
+    }
+
+    .FifthBlockDesc {
+        font-size: 2.1vh;
+        line-height: 100%;
+    }
+
+    .footerCard {
+        width: 25vw;
+    }
+
+    .SecondBlockContainer .col {
+
+        padding-left: 6vw;
+        padding-right: 6vw;
+
+        font-size: 6vh;
+        line-height: 100%;
+    }
+
+    .SecondBlockVideo {
+        display: none;
+    }
+
+    .col.c1 {
+        background: url('assets/media/rustmobile.jpg') center / cover;
+    }
+
+    .col.c2 {
+        background: url('assets/media/rustmobile2.jpg') center / cover;    
+    }
+
+    .col.c3 {
+        background: url('assets/media/rustmobile3.jpg') center / cover; 
+    }
+
+    .col.c4 {
+        background: url('assets/media/rustmobile4.jpg') center / cover;
+    }
+
+    .SecondBlock {
+        overflow-x: scroll;
+    }
+
+    .FourthBlock {
+        overflow: hidden;
+    }
+
+    .FourthBlockTitle .row1 .rowBDiv {
+        width: 40%;
+    }
+
+    .radImage {
+        right: -20%;
+        top: 50%;
+        width: 80%;
+    }
+}
+
+.modalBg {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(16px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+
+    z-index: 15;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.closeBox {
+    position: absolute;
+
+    top: 0;
+    right: 100%;
+
+    width: 100%;
+    height: 100%;
+    /* background-color: #0078fe; */
+}
+
+.closeBox.r {
+    left: 100%;
+}
+
+.content-container {
+    width: 100%;
+    display: none;
+    height: 100%;
+    position: relative;
+
+    opacity: 0;
+
+
+    transition: 2s;
+}
+
+.req-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    transition: 2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+
+.login-content, .req-content {
+    position: relative;
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background: transparent;
+    transition: 2s;
+}
+
+.req-content {    
+    height: 100vh;
+
+    backdrop-filter: blur(40px);
+
+    border: 1px solid #D900FF;
+}
+
+.form-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.login-content-div {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 6px;
+    background-color: #D900FF;
+    transition: 0.5s;
+}
+
+.login-content-div.r {  
+    top: 0;
+    right: 0; 
+}
+
+.login-content-div.l {
+    bottom: 0;
+    left: 0;
+}
+
+.login-form {
+    margin-top: 5vh;
+}
+
+.form-control.code {
+    margin-top: 4vh;
+}
+
+.login-text-heading {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+}
+
+.login-heading {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.login-text-desc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    margin-top: 1vh;
+}
+
+.login-text-desc a {
+    color: #fff;
+}
+
+.login-button {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+
+    border: 2px solid #D900FF;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    padding: 1vh 4.5vw;
+
+    position: relative;
+
+    text-decoration: none;
+
+    transition: 0.5s;
+
+    overflow: hidden;
+
+}
+
+.login-button:hover{
+    background: #D900FF;
+
+    box-shadow: 0 0 5px rgba(224, 46, 255, 0.5),
+                0 0 25px rgba(224, 46, 255, 0.5),
+                0 0 50px rgba(224, 46, 255, 0.5),
+                0 0 200px rgba(224, 46, 255, 0.5);
+
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+
+    cursor: pointer;
+    
+    transition: 0.5s;
+}
+
+.modalRedP {
+    display: none;
+    transition: 0.2s;
+    position: absolute;
+    right: 0;
+    margin: auto 0;
+}
+
+.modalRedP:hover {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.login-button:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.login-button span{
+    position: absolute;
+    display: block;
+}
+.login-button span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#D900FF);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.login-button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#D900FF);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.login-button span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#D900FF);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#D900FF);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+.form-control, .form-control-r {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #930ED8;
+    padding-bottom: 10px;
+    width: 100%;
+
+    margin-bottom: 55px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #808080;
+}
+
+.form-control-r {
+    margin-top: 2vh;
+}
+
+
+.loginInsertKey {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    display: block;
+
+}
+
+.loginInsertKeyA {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+
+    display: block;
+
+    margin-top: 5px;
+
+    transition: 0.2s;
+}
+
+.loginInsertKeyA:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    padding: 0;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    background-color: rgba(166, 26, 236, 1);
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #102770;
+    font-family: 'unicons';
+    content: '\eb4f';
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+    transform: translateX(44px) rotate(-270deg);
+}
+  
+  
+.card-3d-wrap {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+.card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-front, .card-back {
+    width: 100%;
+    height: 100vh;
+
+    margin-top: -15vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+
+
+
+
+.account-bg {
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: #000000;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.account-header {
+
+    position: relative;
+
+    width: 100%;
+    
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    z-index: 1;
+
+    overflow: hidden;
+
+}
+
+.account-header-bg {
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    position: absolute;
+
+    background: url('assets/media/wallpaper1.png') center / cover;
+
+    transition: 0.5s;
+}
+
+.account-header:hover .account-header-bg {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.account-header-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 95%;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 3.5vw;
+}
+
+.account-header-title .ha {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    opacity: 0.7;
+
+    transition: 0.2s;
+}
+
+.account-header-title .ha:hover {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.account-header-time-block {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-header-time {
+    font-family: BRAVEEightyoneRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 95%;
+    /* or 68px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.account-header-time-number {
+    margin-left: 1vw;
+}
+
+.account-header-time-div {
+    margin-left: 1vw;
+}
+
+.account-header-time-desc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 95%;
+    /* identical to box height, or 17px */
+
+    text-align: center;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+
+    margin-top: 0.5vh;
+}
+
+.account-container {
+    /* width: 100%; */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* padding-top: 5vh; */
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 5vh;
+
+    overflow: hidden;
+}
+
+.account-content {
+    width: 100%;
+    z-index: 1;
+}
+
+.account-content-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 95%;
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+}
+
+.account-content-title .b {
+    font-family: Montserrat-Bold;
+}
+
+.account-line {
+    background: #1E1E1E;
+    height: 2px;
+}
+
+.account-row-btn {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 95%;
+
+    color: #FFFFFF;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    background: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.account-row {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 95%;
+
+    color: #FFFFFF;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    background: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-row-btn:hover {
+    cursor: pointer;
+}
+
+.accountStatusRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    /* padding-bottom: 20px; */
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.accountStatusRowActive {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* max-height: 100%; */
+}
+
+.accountColumn {
+    display: flex;
+    align-items: center;
+}
+
+.accountLoginPassData {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 95%;
+    /* identical to box height, or 20px */
+
+
+    color: #FFFFFF;
+}
+
+.accountAction {
+    border: 1px solid #FFCF25;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 20px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+
+    background-color: transparent;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transition: 0.2s;
+}
+
+.accountAction:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #FFCF25;
+
+    transition: 0.2s;
+}
+
+.accountExpiredStatus {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 95%;
+    /* identical to box height, or 20px */
+    
+    text-align: right;
+
+}
+
+.accountGoodStatus {
+    color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    margin-left: 5px;
+}
+
+.account-character {
+    position: absolute;
+    top: 22.5%;
+    height: 75vh;
+    z-index: 0;
+}
+
+.account-character.left {
+    left: 2%;
+}
+
+.account-character.right {
+    right: 2%;
+}
+
+
+.cont {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: bold;
+
+    text-shadow: 0px 0px 10px #8fbcff75;
+}
+
+.text {
+    font-size: 35vh;
+    opacity: 0;
+    transition: 0.5s;
+    position: fixed;
+}
+
+@media (max-width: 1000px) {
+    .text {
+        font-size: 10vh;
+        opacity: 0;
+        transition: 0.5s;
+    
+        position: fixed;
+    }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    cursor: default;
+
+    pointer-events: none;
+}
+
+.intro-text-finish .preloader-bg {
+    display: none;
+}
+
+.intro-text-start .preloader-bg .cont.animated .f1 {
+    color: rgb(116, 216, 178);
+    animation-name: text1;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.intro-text-start .preloader-bg .cont.animated .f2 {
+    animation-name: text2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    color: rgb(116, 169, 216);
+    animation-delay: 0.8s;
+    animation-timing-function: ease-out;
+}
+
+.intro-text-start .preloader-bg .cont.animated .f3 {
+    animation-name: text3;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    color: rgb(197, 139, 100);
+    animation-delay: 1.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes text1{
+    0% {
+        opacity: 0;
+        color: #0078fe;
+        transform: translateX(-15vh);
+    }
+    60% {
+        opacity: 1;
+        margin-left: 0;
+        color: #71faff;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        color: #727272;
+        transform: translateX(5vh);
+    }
+}
+
+@keyframes text2{
+    0% {
+        opacity: 0;
+        color: #0078fe;
+        transform: translateX(15vh);
+    }
+    60% {
+        opacity: 1;
+        margin-left: 0;
+        color: #9bfffa;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        color: #3f3f3f;
+        transform: translateX(-5vh);
+    }
+}
+
+@keyframes text3{
+    0% {
+        opacity: 0;
+        color: #0078fe;
+        transform: scale(0.3);
+    }
+    60% {
+        opacity: 1;
+        margin-left: 0;
+        color: #9bfffa;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+        color: #3f3f3f;
+        transform: scale(1);
+    }
+}
+
+#container-waiting {
+    z-index: 11;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#container {
+    z-index: 9;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#container:not(.animated) {
+    animation-name: intro-loaded;
+    animation-delay: 0s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#container.animated {
+    animation-name: intro-loaded;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#container lightIntro {
+    display: none;
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    left: -5%;
+    overflow: hidden;
+    animation-name: zoom-in;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    background-size: 4000px;
+    background-position: -1950px 0;
+}
+#container lightIntro::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    width: 150%;
+    height: 30%;
+    left: -25%;
+    bottom: -27%;
+    border-radius: 50%;
+    z-index: 5;
+    transform-origin: left center;
+    background-size: 4000px;
+    background-position: -1950px 0;
+}
+  
+#container lightIntro {
+    transform-origin: center center;
+}
+#container lightIntro .helper-1 {
+    width: 9.5%;
+    height: 100%;
+    background-color: transparent;
+    left: 50%;
+    top: 0;
+}
+
+  
+#container lightIntro [class*=helper-] {
+    position: absolute;
+}
+
+
+#container lightIntro [class*=helper-] .effect-lumieres {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+                                                            animation-name: showing-lumieres;
+                                                            animation-duration: 2s;
+                                                            animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+#container lightIntro [class*=helper-] .effect-lumieres [class*=lamp-] {
+    position: absolute;
+    display: block;
+    height: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+    background: var(--color);
+}
+#container lightIntro [class*=helper-] .effect-lumieres [class*=lamp-]::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+}
+
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-3 {
+    --color: #ff00cc;
+    left: 5.8%;
+    width: 2.1%;
+                                                            animation-delay: 3.07s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-3::before {
+    left: 195%;
+                                                            animation-delay: 2.42s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-4 {
+    --color: #04fd8f;
+    left: 10.1%;
+    width: 2%;
+                                                            animation-delay: 2.95s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-4::before {
+    left: 121%;
+                                                            animation-delay: 2.41s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-11 {
+    --color: #fd0100;
+    left: 41%;
+    width: 2.2%;
+                                                            animation-delay: 3.2s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-11::before {
+    left: 20%;
+                                                            animation-delay: 2.77s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-12 {
+    --color: #01ffff;
+    left: 44.2%;
+    width: 2.6%;
+                                                            animation-delay: 2.84s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-12::before {
+    left: 66%;
+                                                            animation-delay: 3.18s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-15 {
+    --color: #0078fe;
+    left: 53.8%;
+    width: 2.3%;
+                                                            animation-delay: 2.99s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-15::before {
+    left: 152%;
+                                                            animation-delay: 2.45s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-16 {
+    --color: #0080ff;
+    left: 57.2%;
+    width: 2%;
+                                                            animation-delay: 3.24s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-16::before {
+    left: 179%;
+                                                            animation-delay: 3.09s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-17 {
+    --color: #ffae01;
+    left: 62.3%;
+    width: 2.9%;
+                                                            animation-delay: 2.4s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-17::before {
+    left: 173%;
+                                                            animation-delay: 3.11s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-19 {
+    --color: #a601f4;
+    left: 72.8%;
+    width: 0.8%;
+                                                            animation-delay: 2.19s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-19::before {
+    left: 181%;
+                                                            animation-delay: 2.71s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-20 {
+    --color: #f30b34;
+    left: 74.3%;
+    width: 2%;
+                                                            animation-delay: 2.99s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-20::before {
+    left: 114%;
+                                                            animation-delay: 2.97s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-23 {
+    --color: #01ffff;
+    left: 78.5%;
+    width: 2%;
+                                                            animation-delay: 3.47s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-23::before {
+    left: 171%;
+                                                            animation-delay: 2.54s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-24 {
+    --color: #a201ff;
+    left: 85.3%;
+    width: 1.1%;
+                                                            animation-delay: 2.46s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-24::before {
+    left: 141%;
+                                                            animation-delay: 2.04s;
+}
+
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-3,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-11,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-15,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-19,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-23 {
+    animation-name: lumieres-moving-left;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-3::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-11::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-15::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-19::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-23::before {
+    animation-name: lumieres-moving-left;
+    animation-duration: 3.5s;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-4,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-12,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-16,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-20,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-24 {
+    animation-name: lumieres-moving-right;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-4::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-12::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-16::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-20::before,
+#container lightIntro [class*=helper-] .effect-lumieres .lamp-24::before {
+    animation-name: lumieres-moving-right;
+    animation-duration: 3.5s;
+  }
+
+@keyframes fading-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+@keyframes lumieres-moving-right {
+    0% {
+      transform: translate(0);
+    }
+    40% {
+      transform: translate(-10px) scaleX(1);
+    }
+    50% {
+      transform: translate(-60px);
+    }
+    100% {
+      transform: translate(-120px) scaleX(3);
+    }
+}
+@keyframes lumieres-moving-left {
+    0% {
+      transform: translate(0);
+    }
+    40% {
+      transform: translate(10px) scaleX(1);
+    }
+    50% {
+      transform: translate(60px);
+    }
+    100% {
+      transform: translate(120px) scaleX(2);
+    }
+}
+@keyframes zoom-in {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(10);
+    }
+}
+@keyframes showing-lumieres {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes intro-loaded {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .account-header-title, .account-header-title .ha {
+        font-size: 2vh;
+        line-height: 100%;
+    }
+
+    .login-text-heading {
+        font-size: 30px;
+        line-height: 100%;
+    }
+
+    .login-content {
+        width: 80%;
+    }
+
+    .modalRedP {
+        display: block;
+    }
+
+    .checkbox:checked + label, .checkbox:not(:checked) + label {
+        margin-top: 7vh;
+    }
+
+    .card-front, .card-back {
+        margin-top: -7vh;
+    }
+
+    .login-button {
+        padding: 1vh 12vw;
+    }
+
+    .account-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .account-header-time {
+        font-size: 7vh;
+        line-height: 100%;
+    }
+
+    .account-header-time-desc {
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    .account-content-title {
+        font-size: 28px;
+        line-height: 100%;
+
+        white-space: nowrap;
+    }
+
+    .account-character.left {
+        left: -40%;
+        opacity: 0;
+    }
+    
+    .account-character.right {
+        right: -40%;
+        opacity: 0;
+    }
+
+    .accountLoginPassData {
+        font-size: 3vh;
+    }
+
+    .accountExpiredStatus {
+        font-size: 2.5vh;
+    }
+
+    .subContentRowDays {
+        font-size: 4vh;
+    }
+
+    .subContentRowPrice {
+        font-size: 4vh;
+    }
+
+    .accountColumn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .accountStatusRow {
+        display: block;
+    }
+
+    .dwnldbtnanim {
+        margin-right: 0;
+    }
+
+    /* .accountLoginPassData {
+        margin-top: 20px;
+    } */
+
+    .req-content {
+        width: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .form-title {
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    .form-control-r {
+        font-size: 14px;
+        line-height: 100%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .ThirdBlockContainer {
+        max-width: 1920px;
+    }
+
+    .ThirdBlockRow1 {
+        padding-left: 0;
+    }
+
+    .ThirdBlockRow2 {
+        padding-right: 0;
+    }
+
+    .leftDiv {
+        margin-right: 1vw;
+        margin-top: 3.5%;
+    }
+
+    .leftDiv:before {
+        height: 3px;
+        margin-right: max(2vh);
+        width: max(4.5vh);
+    }
+
+    .leftDivText {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .ThirdBlockRow1 .content {
+        font-size: 100px;
+        line-height: 128px;
+    }
+
+    .ThirdBlockRow2rightText {
+        font-size: 44px;
+    }
+
+    .FirstBlockButtonBold {
+        font-size: 48px;
+        line-height: 130%;
+    }
+
+    .FirstBlockButton {
+        font-size: 38px;
+        line-height: 100%;
+    }
+
+    .FirstBlockButton:before {
+        bottom: 220%;
+    }
+
+    .FirstBlockButton:hover {
+        border-bottom: 6px solid #D900FF;    
+    }
+
+    .FirstBlockContentCenterTextDesc {
+        font-size: 52px;
+        line-height: 100%;
+    }
+
+    .FirstBlockContentCenterTextSubDesc {
+        font-size: 44px;
+        line-height: 100%;
+    }
+
+    .FirstBlockButtonBoldDown {
+        font-size: 46px;
+        line-height: 100%;
+    }
+
+    .FourthBlock {
+        padding-left: 0;
+        padding-right: 0;
+
+        width: 100%;
+        justify-content: center;
+    }
+
+    .FourthBlockContainer {
+        max-width: 1920px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .FourthBlockTitle {
+        font-size: 120px;
+        line-height: 140%;
+    }
+
+    .FourthBlockDesc {
+        font-size: 44px;
+    }
+
+    .FourthBlockTitle .row1 .rowBDiv {
+        margin-left: 1vw;
+        height: 3px;
+        width: 40%;
+    }
+
+    .FifthBlockTitle {
+        font-size: 220px;
+        line-height: 100%;
+    }
+
+    .FifthBlockMail {
+        font-size: 80px;
+        line-height: 100%;
+    }
+
+    .FifthBlockMailDivider {
+        margin-top: 1.5vh;
+        height: 3px;
+    }
+
+    .FifthBlockDesc {
+        font-size: 44px;
+        line-height: 100%;
+        margin-top: 15vh;
+    }
+
+    .characterImage {
+        transform: translateX(280%) translateY(40%) scale(1.3);
+    }
+
+    .radImage {
+        height: 45vh;
+        right: 15%;
+    }
+}
+
+.FourthBlockShowcase {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.work-item {
+    text-align: center;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.work-item img:hover {
+    transform: scale(1.05);
+}
+
+.work-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+}
