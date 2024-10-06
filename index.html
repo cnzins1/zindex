@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@zin - Lua Anti-Cheat Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="bg-black text-white font-poppins">
+    <div id="starry-sky"></div>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+        <div class="container mx-auto px-6 py-3">
+            <div id="menu-links" class="flex justify-between items-center w-full">
+                <a href="#home" class="menu-item">Home</a>
+                <a href="#about" class="menu-item">About</a>
+                <a href="#projects" class="menu-item">Projects</a>
+                <a href="#stats" class="menu-item">Stats</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="space-y-16">
+        <section id="home" class="min-h-screen flex items-center justify-center relative">
+            <div class="text-center">
+                <h1 class="text-8xl font-bold mb-4 fade-in fancy-text">zin</h1>
+                <p class="text-xl text-gray-400 mb-8 fade-in">
+                    <span class="fade-in-delay-1">The Best Anti-Cheat Developer</span><br>
+                    <span class="fade-in-delay-2">Up For Hire</span><br>
+                    <span class="fade-in-delay-3">Securing virtual worlds, one script at a time</span>
+                </p>
+                <a href="#projects" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 transition-all duration-300 fade-in">View My Projects</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-12 text-center fade-in fancy-text">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <p class="text-lg mb-4">
+                            I'm a passionate Lua developer specializing in anti-cheat systems for online games and applications. With years of experience in the field, I've developed robust solutions to protect virtual environments from malicious actors.
+                        </p>
+                        <p class="text-lg">
+                            My expertise includes script injection prevention, real-time cheat detection, and secure authentication systems. I'm constantly learning and adapting to new security challenges in the ever-evolving world of online gaming.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-purple-600">
+                            <i class="fas fa-code text-4xl mb-4"></i>
+                            <h3 class="font-bold mb-2">Lua Expert</h3>
+                            <p class="text-sm text-gray-200">5+ years of Lua development</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-green-500 to-blue-600">
+                            <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                            <h3 class="font-bold mb-2">Security Focused</h3>
+                            <p class="text-sm text-gray-200">Specialized in anti-cheat systems</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-yellow-500 to-red-600">
+                            <i class="fas fa-bolt text-4xl mb-4"></i>
+                            <h3 class="font-bold mb-2">Performance Optimizer</h3>
+                            <p class="text-sm text-gray-200">Efficient and scalable solutions</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-pink-500 to-purple-600">
+                            <i class="fab fa-github text-4xl mb-4"></i>
+                            <h3 class="font-bold mb-2">Open Source Contributor</h3>
+                            <p class="text-sm text-gray-200">Active in the Lua community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-12 text-center fade-in fancy-text glow">Projects I've Worked On</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="project-card" data-project="Blade-Ball">
+                        <img src="assets/blade-ball.webp" alt="Blade-Ball" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Blade Ball</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="50000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="4300000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-green-500">Combat</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-green-600 to-blue-700" data-project="devas">
+                        <img src="assets/devas.webp" alt="devas" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Devas Of Creation</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="10000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="20000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-pink-500">Im A Game Developer</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-red-600 to-yellow-700" data-project="baddies">
+                        <img src="assets/baddies.webp" alt="baddies" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Baddies</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="40000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="330000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-purple-500">Multiplayer</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-pink-600 to-purple-700" data-project="Fight-In-School">
+                        <img src="assets/fight-in-school.webp" alt="Fight In A School" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Fight In A School</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="9000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="100000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-red-500">Combat</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-green-600 to-blue-700" data-project="devas">
+                        <img src="assets/survival.webp" alt="devas" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Survival Oddysey</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="1000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="9000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-pink-500">Survival</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-green-600 to-blue-700" data-project="devas">
+                        <img src="assets/track.webp" alt="devas" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Field & Track: Infinite</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="1500">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="80000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-pink-500">Track</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-green-600 to-blue-700" data-project="devas">
+                        <img src="assets/gymleague.webp" alt="devas" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Gym league</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="20000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="330000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-pink-500">Simulator</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gradient-to-br from-green-600 to-blue-700" data-project="devas">
+                        <img src="assets/aura.webp" alt="devas" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 glow">Aura Craft</h3>
+                            <p class="text-gray-300 mb-4">Roblox game</p>
+                            <div class="flex justify-between mb-4">
+                                <div class="relative">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="stat-number" data-target="1000">0+</span>
+                                    <span class="tooltip">Players</span>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-eye mr-2"></i>
+                                    <span class="stat-number" data-target="60000000">0+</span>
+                                    <span class="tooltip">Visits</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="label bg-blue-500">Lua</span>
+                                <span class="label bg-pink-500">Simulator</span>
+                                <span class="label bg-yellow-500">Roblox</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-12 text-center fade-in fancy-text glow">Total Stats</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="stat-card bg-gradient-to-br from-blue-600 to-purple-700">
+                        <i class="fas fa-project-diagram stat-icon text-blue-300"></i>
+                        <h3 class="text-xl font-bold mb-2 glow">Total Projects</h3>
+                        <p class="text-3xl font-bold stat-number" data-target="8">0</p>
+                    </div>
+                    <div class="stat-card bg-gradient-to-br from-green-600 to-blue-700">
+                        <i class="fas fa-eye stat-icon text-green-300"></i>
+                        <h3 class="text-xl font-bold mb-2 glow">Total Visits</h3>
+                        <p class="text-3xl font-bold stat-number" data-target="6000000000">0</p>
+                    </div>
+                    <div class="stat-card bg-gradient-to-br from-yellow-600 to-red-700">
+                        <i class="fas fa-users stat-icon text-yellow-300"></i>
+                        <h3 class="text-xl font-bold mb-2 glow">Total Players</h3>
+                        <p class="text-3xl font-bold stat-number" data-target="200000">0</p>
+                    </div>
+                    <div class="stat-card bg-gradient-to-br from-purple-600 to-pink-700">
+                        <i class="fas fa-code stat-icon text-purple-300"></i>
+                        <h3 class="text-xl font-bold mb-2 glow">Years Experience</h3>
+                        <p class="text-3xl font-bold stat-number" data-target="5">0</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section id="video-gallery">
+            <div class="video-wrapper">
+                <div class="video-item">
+                    <h3>Box 1</h3>
+                    <video class="hover-clip" autoplay loop muted playsinline>
+                        <source src="vids/vid-1.mp4" type="video/mp4">
+                        your browser doesnt support mp4s.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Box 2</h3>
+                    <video class="hover-clip" autoplay loop muted playsinline>
+                        <source src="vids/vid-2.mp4" type="video/mp4">
+                        your browser doesnt support mp4s.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Box 3</h3>
+                    <video class="hover-clip" autoplay loop muted playsinline>
+                        <source src="vids/vid-3.mp4" type="video/mp4">
+                        your browser doesnt support mp4s.
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="py-8">
+            <div class="container mx-auto px-6 text-center text-gray-300">
+                <h2 class="text-2xl font-bold mb-6 fancy-text">My Socials & How to Contact Me</h2>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://discord.com/users/zin" target="_blank"
+                       rel="noopener noreferrer" class="social-link" data-tooltip="Join me on Discord">
+                        <i class="fab fa-discord" style='font-size:36px'></i>
+                    </a>
+                    <a href="https://github.com/zin" target="_blank"
+                       rel="noopener noreferrer" class="social-link" data-tooltip="Check out my GitHub">
+                        <i class="fab fa-github" style='font-size:36px'></i>
+                    </a>
+                </div>
+                <p>&copy; <span id="current-year"></span> coded by @sevenv1. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-gray-800 p-8 rounded-lg max-w-2xl w-full mx-4">
+                <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+                <p id="modal-description" class="text-gray-300 mb-4"></p>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
+                <button id="close-modal" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded transition-all duration-300">Close</button>
+            </div>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <script src="src/script.js"></script>
+    </body>
+    </html>
