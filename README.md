@@ -1,4 +1,4 @@
-<h1 align="center">coded by sevenv1!</h1>
+<h1 align="center">coded by sevenv1! (https://github.com/sevenv1)</h1>
 <h3 align="left">made for zin</h3>
 
 <h3 align="left">languages used:</h3>
