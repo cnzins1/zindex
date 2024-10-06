@@ -1,0 +1,431 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#starry-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.menu-item {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d1d5db;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+}
+
+.menu-item:hover {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.fancy-text {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: colorShift 5s ease infinite;
+}
+
+@keyframes colorShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.skill-card {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: popIn 1s ease-out forwards;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.project-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    animation: popIn 1s ease-out forwards;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.label {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.project-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: popIn 1s ease-out forwards;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stat-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.relative:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.space-y-16 > * + * {
+    margin-top: 4rem;
+}
+
+.text-gray-400 {
+    color: #a0aec0;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.social-link {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #c251c1;
+}
+
+.social-link.discord {
+    color: #5865F2;
+}
+  
+.social-link.github {
+    color: #ffffff;
+}
+
+.glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+section {
+    background-color: transparent;
+}
+
+.label {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#project-modal {
+    backdrop-filter: blur(8px);
+}
+
+#project-modal > div {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+p {
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+footer {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+    border-radius: 5px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: popIn 1s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+    opacity: 0;
+    animation: popIn 1s ease-out 0.5s forwards;
+}
+
+.fade-in-delay-2 {
+    opacity: 0;
+    animation: popIn 1s ease-out 1s forwards;
+}
+
+.fade-in-delay-3 {
+    opacity: 0;
+    animation: popIn 1s ease-out 1.5s forwards;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#menu-links {
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-item {
+    position: relative;
+    transition: all 0.5s ease;
+    padding: 10px 20px;
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+#menu-links:hover .menu-item:nth-child(1) {
+    transform: translateX(75%);
+}
+
+#menu-links:hover .menu-item:nth-child(2) {
+    transform: translateX(25%);
+}
+
+#menu-links:hover .menu-item:nth-child(3) {
+    transform: translateX(-25%);
+}
+
+#menu-links:hover .menu-item:nth-child(4) {
+    transform: translateX(-75%);
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-item:hover {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#video-gallery {
+    padding: 2rem 0;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-item {
+    position: relative;
+    width: 33.33%;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: 1px solid #333;
+}
+
+.video-item:last-child {
+    border-right: none;
+}
+
+.video-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 24px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.hover-clip {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.video-item:hover .hover-clip {
+    opacity: 1;
+}
