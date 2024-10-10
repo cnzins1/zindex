@@ -429,3 +429,12 @@ footer {
 .video-item:hover .hover-clip {
     opacity: 1;
 }
+
+#close-modal {
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+#close-modal:hover {
+    opacity: 1;
+}
