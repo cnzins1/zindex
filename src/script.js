@@ -171,27 +171,60 @@ const modaltags = document.getElementById('modal-tags');
 const closemodal = document.getElementById('close-modal');
 
 const projinfo = {
-    // sorry zin u gotta add the other games i forgot to lmao, just copy and paste the other games and fill in the info
-    // this code makes it so when you click on it, it pops up.
     "Blade-Ball": {
         title: "Blade Ball",
         description: "Blade Ball is an exciting Roblox game that combines elements of dodgeball and sword fighting. Players use their reflexes and strategy to deflect projectiles and outlast their opponents.",
-        tags: ["Lua", "Roblox", "Multiplayer", "Action"]
+        tags: ["Multiplayer", "Action", "PvP", "Reflexes", "Strategy", "Competitive"]
     },
     "devas": {
         title: "Devas Of Creation",
         description: "Devas Of Creation is a unique Roblox experience that allows players to harness the power of creation. Players can build, craft, and shape their own worlds while interacting with others in a vast, shared universe.",
-        tags: ["Lua", "Roblox", "Sandbox", "Creativity"]
+        tags: ["Sandbox", "Creativity", "World-Building", "Multiplayer", "Exploration", "Crafting"]
     },
     "baddies": {
         title: "Baddies",
         description: "Baddies is a thrilling Roblox game where players take on the role of antiheroes. Navigate through a world of moral ambiguity, complete missions, and rise to the top of the criminal underworld.",
-        tags: ["Lua", "Roblox", "RPG", "Action"]
+        tags: ["RPG", "Action", "Open World", "Crime", "Missions", "Character Progression"]
     },
     "Fight-In-School": {
         title: "Fight In A School",
         description: "Fight In A School is an action-packed Roblox game set in a school environment. Players engage in hand-to-hand combat, using various fighting styles and techniques to become the ultimate school champion.",
-        tags: ["Lua", "Roblox", "Fighting", "Multiplayer"]
+        tags: ["Fighting", "Multiplayer", "PvP", "School Setting", "Combat System", "Character Customization"]
+    },
+    "Survival-Oddysey": {
+        title: "Survival Oddysey",
+        description: "Survival Oddysey is a challenging Roblox game where players must survive in a harsh environment. Gather resources, craft tools, and build shelters while facing various threats and obstacles.",
+        tags: ["Survival", "Crafting", "Resource Management", "Base Building", "PvE", "Exploration"]
+    },
+    "Field-Track-Infinite": {
+        title: "Field & Track: Infinite",
+        description: "Field & Track: Infinite is a sports simulation game on Roblox where players compete in various track and field events. Test your speed, agility, and timing in a variety of athletic challenges.",
+        tags: ["Sports", "Simulation", "Athletics", "Competitive", "Multiplayer", "Mini-games"]
+    },
+    "Gym-League": {
+        title: "Gym League",
+        description: "Gym League is a fitness-themed Roblox game where players train and compete to become the ultimate gym champion. Build your strength, endurance, and skills through various exercises and challenges.",
+        tags: ["Fitness", "Simulation", "Character Progression", "Competitive", "Mini-games", "Customization"]
+    },
+    "Aura-Craft": {
+        title: "Aura Craft",
+        description: "Aura Craft is a magical Roblox game where players harness the power of auras to craft unique items and abilities. Explore a mystical world, collect resources, and become a master of aura manipulation.",
+        tags: ["Crafting", "Magic", "RPG Elements", "Exploration", "Resource Collection", "Skill Progression"]
+    },
+    "Windy-Chiraq": {
+        title: "Windy Chiraq",
+        description: "Windy Chiraq is an urban exploration game set in a fictional city inspired by Chicago. Navigate through the bustling streets, interact with NPCs, and uncover the city's secrets and challenges.",
+        tags: ["Open World", "Urban", "Exploration", "NPC Interaction", "Quests", "City Simulation"]
+    },
+    "Weak-Legacy-2": {
+        title: "Weak Legacy 2",
+        description: "Weak Legacy 2 is a humorous Roblox game that parodies traditional RPGs. Play as an unlikely hero with questionable abilities and embark on a comedic adventure filled with quirky characters and absurd quests.",
+        tags: ["RPG", "Comedy", "Parody", "Adventure", "Quests", "Character Progression"]
+    },
+    "Slots-RNG": {
+        title: "Slots RNG",
+        description: "Slots RNG is a casino-style game on Roblox that simulates slot machine mechanics. Test your luck with various themed slot machines and experience the thrill of virtual gambling without real money stakes.",
+        tags: ["Casino", "Simulation", "Gambling", "Mini-games", "RNG", "Themed Machines"]
     }
 };
 
