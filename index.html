@@ -41,9 +41,15 @@
         .fade-in-delay-3 {
             animation-delay: 1.5s;
         }
+
+        /* Image fade effect */
         .fade-in-image {
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1; /* Fully visible */
         }
     </style>
 </head>
@@ -63,7 +69,7 @@
     <main class="space-y-16">
         <section id="home" class="min-h-screen flex items-center justify-center relative">
             <div class="text-center">
-                <img src="assets/images/webpicnoob.png" alt="zin" class="fade-in-image w-52 h-auto mb-4" />
+                <img id="intro-image" src="assets/images/webpicnoob.png" alt="zin" class="fade-in-image w-52 h-auto mb-4 mx-auto" />
                 <div class="fade-in">
                     <h1 class="animated-title text-3xl font-bold mb-4">Welcome to My Portfolio</h1>
                     <p class="text-xl text-gray-400 mb-2">Roblox anti-cheat developer ( Luau )</p>
@@ -73,8 +79,24 @@
             </div>
         </section>
     </main>
+
+    <script>
+        // Handle scroll events
+        window.addEventListener('scroll', () => {
+            const image = document.getElementById('intro-image');
+            const scrollPosition = window.scrollY;
+
+            // Show the image when scrolling down
+            if (scrollPosition > 100) { // Adjust the scroll position threshold as needed
+                image.classList.add('visible');
+            } else {
+                image.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
+
 
 
         <section id="about" class="py-16">
