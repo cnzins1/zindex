@@ -8,38 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css">
     <style>
-        /* Animation for the title in the navbar */
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 0;
-            }
-        }
+        
+        
 
-        /* Initial styles for navbar */
-        .navbar {
-            animation: slideDown 0.5s ease forwards;
-            opacity: 0; /* Start invisible */
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background: transparent;
-            transition: background 0.3s;
-        }
-
-        /* When the navbar is visible */
-        .navbar.visible {
-            opacity: 1; /* Fully visible */
-            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-        }
-
-        /* Fade-in effect for text */
+        
         .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease-in forwards;
@@ -58,12 +30,12 @@
 
         /* Image fade effect */
         .fade-in-image {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out;
         }
 
         .visible {
-            opacity: 1; /* Fully visible */
+            opacity: 0.7; /* Fully visible */
         }
     </style>
 </head>
@@ -83,7 +55,7 @@
     <main class="space-y-16">
         <section id="home" class="min-h-screen flex items-center justify-center relative">
             <div class="text-center">
-                <img id="intro-image" src="assets/images/webpicnoob.png" alt="zin" class="fade-in-image w-70 h-auto mb-4 mx-auto" />
+                <img id="intro-image" src="assets/images/webpicnoob.png" alt="zin" class="fade-in-image w-69 h-auto mb-4 mx-auto" />
                 <div class="fade-in">
                     <h1 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h1>
                     <p class="text-xl text-gray-400 mb-2">Roblox anti-cheat developer ( Luau )</p>
