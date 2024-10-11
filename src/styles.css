@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'SmallestPixel7';
+    src: url('fonts/smallest_pixel-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SmallestPixel7', 'Poppins', sans-serif; /* Add SmallestPixel7 font */
     background-color: #000000;
     color: #ffffff;
 }
