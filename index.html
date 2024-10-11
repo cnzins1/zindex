@@ -7,6 +7,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css">
+    <style>
+        /* Animation for the title */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-title {
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0; /* Start invisible */
+        }
+
+        /* Fade-in effect for text */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        /* Delay for each line of text */
+        .fade-in-delay-1 {
+            animation-delay: 0.5s;
+        }
+        .fade-in-delay-2 {
+            animation-delay: 1s;
+        }
+        .fade-in-delay-3 {
+            animation-delay: 1.5s;
+        }
+        .fade-in-image {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+    </style>
 </head>
 <body class="bg-black text-white font-poppins">
     <div id="starry-sky"></div>
@@ -21,18 +60,21 @@
         </div>
     </nav>
 
-   <main class="space-y-16">
-    <section id="home" class="min-h-screen flex items-center justify-center relative">
-        <div class="text-center">
-            <img src="assets/images/character.png" alt="zin" class="fade-in-image w-52 h-auto mb-4" />
-            <p class="text-xl text-gray-400 mb-8 fade-in">
-                <span class="fade-in-delay-1">Roblox anti-cheat developer ( Luau )</span><br>
-                <span class="fade-in-delay-2">For Hire</span><br>
-                <span class="fade-in-delay-3">Securing games, one script at a time.</span>
-            </p>
-        </div>
-    </section>
-</main>
+    <main class="space-y-16">
+        <section id="home" class="min-h-screen flex items-center justify-center relative">
+            <div class="text-center">
+                <img src="assets/images/webpicnoob.png" alt="zin" class="fade-in-image w-52 h-auto mb-4" />
+                <div class="fade-in">
+                    <h1 class="animated-title text-3xl font-bold mb-4">Welcome to My Portfolio</h1>
+                    <p class="text-xl text-gray-400 mb-2">Roblox anti-cheat developer ( Luau )</p>
+                    <p class="text-xl text-gray-400 mb-2">For Hire</p>
+                    <p class="text-xl text-gray-400">Securing games, one script at a time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
 
 
         <section id="about" class="py-16">
